@@ -116,83 +116,73 @@ return [
             // 'can'  => 'manage-blog',
         ],
         [
-            'text' => 'Perubahan Sifat',
-            'url'  => '/perubahansifat',
-            'icon' => 'refresh',
-            // 'can'  => 'manage-blog',
-        ],
-        [
-            'text' => 'SK KP',
-            'url'  => '/ask/kpsk',
-            'icon' => 'id-card',
-            // 'can'  => 'manage-blog',
-        ],
-        [
-            'text' => 'Kartu Pengawasan',
-            'icon' => 'id-card',
+            'text'    => 'Master Data',
+            'icon'    => 'database',
             'submenu' => [
                 [
-                    'text' => 'Angkutan Sewa Khusus',
-                    'url'  => '/kp/ask',
+                    'text' => 'Merk',
+                    'url'  => '/m/merk',
                     // 'can'  => 'manage-blog',
                 ],
                 [
-                    'text' => 'Taksi',
-                    'url'  => '/kp/taksi',
+                    'text' => 'Jenis Kendaraan',
+                    'url'  => '/m/jk',
+                    // 'can'  => 'manage-blog',
+                ],
+                // [
+                //     'text' => 'Kategori Perusahaan',
+                //     'url'  => '/m/katperusahaan',
+                //     // 'can'  => 'manage-blog',
+                // ],
+                [
+                    'text' => 'Perusahaan',
+                    'url'  => '/m/perusahaan',
+                    // 'can'  => 'manage-blog',
+                    'submenu' => [
+                      [
+                        'text' => 'Angkutan Sewa Khusus',
+                        'url'  => '/m/perusahaan',
+                        // 'can'  => 'manage-blog',
+                      ],
+                      [
+                        'text' => 'Taksi',
+                        'url'  => '/m/perusahaantaksi',
+                        // 'can'  => 'manage-blog',
+                      ],
+                    ],
+                ],
+                // [
+                //     'text' => 'Status Awal Kendaraan',
+                //     'url'  => '/m/sak',
+                //     // 'can'  => 'manage-blog',
+                // ],
+                [
+                    'text' => 'Wilayah',
+                    'url'  => '/m/wilayah',
+                    // 'can'  => 'manage-blog',
+                ],
+                [
+                    'text' => 'Warna',
+                    'url'  => '/m/warna',
                     // 'can'  => 'manage-blog',
                 ],
             ],
         ],
         [
-            'text' => 'Peremajaan',
-            'icon' => 'repeat',
-            // 'can'  => 'manage-blog',
+            'text'    => 'Settting',
+            'icon'    => 'cogs',
             'submenu' => [
-              [
-                  'text' => 'Angkutan Sewa Khusus',
-                  'url'  => '/peremajaan/ask',
-                  // 'can'  => 'manage-blog',
-              ],
-              [
-                  'text' => 'Taksi',
-                  'url'  => '/peremajaan/taksi',
-                  // 'can'  => 'manage-blog',
-              ],
+                [
+                    'text' => 'Kartu Pengawasan',
+                    'url'  => '/m/setting',
+                    // 'can'  => 'manage-blog',
+                ],
+                [
+                    'text' => 'Pasal Peraturan Mentri',
+                    'url'  => '/m/pasal',
+                    // 'can'  => 'manage-blog',
+                ],
             ],
-        ],
-        [
-            'text' => 'Perpanjangan',
-            'icon' => 'money',
-            // 'can'  => 'manage-blog',
-            'submenu' => [
-              [
-                  'text' => 'Angkutan Sewa Khusus',
-                  'url'  => '/perpanjangan/ask',
-                  // 'can'  => 'manage-blog',
-              ],
-              [
-                  'text' => 'Taksi',
-                  'url'  => '/perpanjangan/taksi',
-                  // 'can'  => 'manage-blog',
-              ],
-            ],
-        ],
-        [
-          'text' => 'Laporan',
-          'icon' => 'book',
-          // 'can'  => 'manage-blog',
-          'submenu' => [
-            [
-                'text' => 'Angkutan Sewa Khusus',
-                'url'  => '/laporan/ask',
-                // 'can'  => 'manage-blog',
-            ],
-            [
-                'text' => 'Taksi',
-                'url'  => '/laporan/taksi',
-                // 'can'  => 'manage-blog',
-            ],
-          ],
         ],
     ],
 

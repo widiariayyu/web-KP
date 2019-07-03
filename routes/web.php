@@ -16,11 +16,16 @@
 // });
 
 Auth::routes();
+Route::post('login/custom',['uses'=>'AuthController@login',
+'as' => 'login.custom'
+]);
+
 Route::group(['middleware' => 'auth'], function() {
   Route::get('/', function () { return redirect()->route('home'); });
   
   Route::prefix('home')->group(function () {
-    Route::get('/', 'HomeController@index')->name('home');
+	Route::get('/', 'HomeController@index')->name('home');
+	Route::get('/admin', 'AdminController@index')->name('admin');
     Route::post('/sms/kp/sebelum', 'HomeController@smsKPSebelum')->name('sms.kp.sebelum');
     Route::post('/sms/kp/lewat', 'HomeController@smsKPLewat')->name('sms.kp.lewat');
 		Route::prefix('dt')->group(function () {
